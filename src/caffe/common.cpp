@@ -191,14 +191,9 @@ void Caffe::DeviceQuery() {
   LOG(INFO) << "Maximum dimension of grid:     "
       << prop.maxGridSize[0] << ", " << prop.maxGridSize[1] << ", "
       << prop.maxGridSize[2];
-  LOG(INFO) << "Clock rate:                    " << prop.clockRate;
   LOG(INFO) << "Total constant memory:         " << prop.totalConstMem;
   LOG(INFO) << "Texture alignment:             " << prop.textureAlignment;
-  LOG(INFO) << "Concurrent copy and execution: "
-      << (prop.deviceOverlap ? "Yes" : "No");
   LOG(INFO) << "Number of multiprocessors:     " << prop.multiProcessorCount;
-  LOG(INFO) << "Kernel execution timeout:      "
-      << (prop.kernelExecTimeoutEnabled ? "Yes" : "No");
   return;
 }
 
